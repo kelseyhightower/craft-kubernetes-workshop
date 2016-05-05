@@ -9,7 +9,7 @@ gcloud compute ssh node0
 ### Create the kube-controller-manager systemd unit file:
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=Kubernetes Controller Manager
 Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 
@@ -21,14 +21,10 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target" > /etc/systemd/system/kube-controller-manager.service'
 ```
 
 Start the kube-controller-manager service:
-
-```
-sudo mv kube-controller-manager.service /etc/systemd/system/
-```
 
 ```
 sudo systemctl daemon-reload

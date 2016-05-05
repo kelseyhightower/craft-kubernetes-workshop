@@ -13,7 +13,7 @@ See the [Download a Kubernetes release](download-a-kubernetes-release.md) lab.
 ### Create the kubelet systemd unit file:
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=Kubernetes Kubelet
 Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 After=docker.service
@@ -28,14 +28,10 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target" > /etc/systemd/system/kubelet.service'
 ```
 
 Start the kubelet service:
-
-```
-sudo mv kubelet.service /etc/systemd/system/
-```
 
 ```
 sudo systemctl daemon-reload
