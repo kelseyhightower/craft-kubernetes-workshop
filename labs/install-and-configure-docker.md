@@ -29,7 +29,7 @@ sudo mv docker-1.9.1 /usr/bin/docker
 ### Create the docker systemd unit file:
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=Docker Application Container Engine
 Documentation=http://docs.docker.io
 
@@ -45,13 +45,7 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
-```
-
-Copy the docker unit file into place.
-
-```
-sudo mv docker.service /etc/systemd/system/docker.service
+WantedBy=multi-user.target" > /etc/systemd/system/docker.service'
 ```
 
 Start docker:
@@ -94,7 +88,7 @@ sudo mv docker-1.9.1 /usr/bin/docker
 ### Create the docker systemd unit file
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=Docker Application Container Engine
 Documentation=http://docs.docker.io
 
@@ -110,13 +104,7 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
-```
-
-Copy the docker unit file into place.
-
-```
-sudo mv docker.service /etc/systemd/system/docker.service
+WantedBy=multi-user.target" > /etc/systemd/system/docker.service'
 ```
 
 Start docker:
