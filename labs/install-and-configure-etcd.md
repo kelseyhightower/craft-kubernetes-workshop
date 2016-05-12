@@ -20,7 +20,7 @@ sudo cp etcd-v2.3.2-linux-amd64/etcd /usr/local/bin/
 ### Create the etcd systemd unit file:
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=etcd
 Documentation=https://github.com/coreos
 
@@ -31,14 +31,10 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target" > /etc/systemd/system/etcd.service'
 ```
 
 Start the etcd service:
-
-```
-sudo mv etcd.service /etc/systemd/system/
-```
 
 ```
 sudo systemctl daemon-reload

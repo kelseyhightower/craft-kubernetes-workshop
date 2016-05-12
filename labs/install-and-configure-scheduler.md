@@ -9,7 +9,7 @@ gcloud compute ssh node0
 ### Create the kube-scheduler systemd unit file:
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=Kubernetes Scheduler
 Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 
@@ -21,14 +21,10 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target" > /etc/systemd/system/kube-scheduler.service'
 ```
 
 Start the kube-scheduler service:
-
-```
-sudo mv kube-scheduler.service /etc/systemd/system/
-```
 
 ```
 sudo systemctl daemon-reload

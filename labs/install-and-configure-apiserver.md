@@ -9,7 +9,7 @@ gcloud compute ssh node0
 ### Create the kube-apiserver systemd unit file:
 
 ```
-[Unit]
+sudo sh -c 'echo "[Unit]
 Description=Kubernetes API Server
 Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 
@@ -24,14 +24,10 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target" > /etc/systemd/system/kube-apiserver.service'
 ```
 
 Start the kube-apiserver service:
-
-```
-sudo mv kube-apiserver.service /etc/systemd/system/
-```
 
 ```
 sudo systemctl daemon-reload
