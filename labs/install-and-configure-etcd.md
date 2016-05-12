@@ -12,7 +12,7 @@ gcloud compute ssh node0
 
 ```
 wget https://storage.googleapis.com/craft-conf/etcd-v2.3.2-linux-amd64.tar.gz
-tar -xvf etcd-v2.3.2-linux-amd64.tar.gz
+tar -zxvf etcd-v2.3.2-linux-amd64.tar.gz
 sudo cp etcd-v2.3.2-linux-amd64/etcdctl /usr/local/bin/
 sudo cp etcd-v2.3.2-linux-amd64/etcd /usr/local/bin/
 ```
