@@ -52,7 +52,7 @@ Use the `kubectl port-forward` command to forward a local port to the health por
 kubectl port-forward healthy-monolith 10081:81
 ```
 
-> You know have access to the /healthz and /readiness HTTP endpoints exposed by the monolith container.
+> You now have access to the /healthz and /readiness HTTP endpoints exposed by the monolith container.
 
 ### Experiment with Readiness Probes
 
