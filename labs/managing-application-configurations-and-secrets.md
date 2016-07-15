@@ -29,7 +29,7 @@ kubectl describe secrets tls-certs
 ### Quiz
 
 * How many items are stored under the `tls-certs` secret?
-* What are key the names?
+* What are the key names?
 
 ## Tutorial: Creating Configmaps
 
