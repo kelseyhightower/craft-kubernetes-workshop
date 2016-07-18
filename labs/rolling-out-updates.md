@@ -6,6 +6,14 @@ Kubernetes makes it easy to rollout updates to your applications using the built
 * Pause and resume an active rolling update
 * Rollback a deployment to a previous revision
 
+Update to kubectl 1.3.0
+
+```
+wget https://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/linux/amd64/kubectl
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin
+```
+
 ## Tutorial: Rollout a new version of the Auth service
 
 ```
