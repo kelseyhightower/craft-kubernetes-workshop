@@ -17,7 +17,7 @@ sudo mv kubectl /usr/local/bin
 ## Tutorial: Rollout a new version of the Auth service
 
 ```
-kubectl rollout history deployment auth
+/usr/local/bin/kubectl rollout history deployment auth
 ```
 
 Modify the auth deployment image:
@@ -31,25 +31,25 @@ image: "kelseyhightower/auth:2.0.0"
 ```
 
 ```
-kubectl apply -f deployments/auth.yaml --record
+/usr/local/bin/kubectl apply -f deployments/auth.yaml --record
 ```
 
 ```
-kubectl describe deployments auth
+/usr/local/bin/kubectl describe deployments auth
 ```
 
 ```
-kubectl get replicasets
+/usr/local/bin/kubectl get replicasets
 ```
 
 ```
-kubectl rollout history deployment auth
+/usr/local/bin/kubectl rollout history deployment auth
 ```
 
 ## Tutorial: Pause and Resume an Active Rollout
 
 ```
-kubectl rollout history deployment hello
+/usr/local/bin/kubectl rollout history deployment hello
 ```
 
 Modify the hello deployment image:
@@ -63,19 +63,19 @@ image: "kelseyhightower/hello:2.0.0"
 ```
 
 ```
-kubectl apply -f deployments/hello.yaml --record
+/usr/local/bin/kubectl apply -f deployments/hello.yaml --record
 ```
 
 ```
-kubectl describe deployments hello
+/usr/local/bin/kubectl describe deployments hello
 ```
 
 ```
-kubectl rollout pause deployment hello
+/usr/local/bin/kubectl rollout pause deployment hello
 ```
 
 ```
-kubectl rollout resume deployment hello
+/usr/local/bin/kubectl rollout resume deployment hello
 ```
 
 ## Exercise: Rollback the Hello service
