@@ -90,7 +90,7 @@ kubectl get pods healthy-monolith
 
 ## Exercise: Experiment with Liveness Probes
 
-Building on what you learned in the previous tutorial use the `kubectl port-forward` and `curl` commands to force the `monolith` container liveness probe to fail. Observe how Kubernetes responds to failing liveness probes.
+Building on what you learned in the previous tutorial use the `kubectl port-forward` and `curl` commands to force the `healthy-monolith` container liveness probe to fail. Observe how Kubernetes responds to failing liveness probes.
 
 ### Hints
 
